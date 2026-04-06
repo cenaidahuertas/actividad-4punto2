@@ -1,3 +1,4 @@
+<img width="1420" height="1439" alt="Diagrama sin título-Ejercicio 2 drawio" src="https://github.com/user-attachments/assets/6f40e327-aeee-44a8-834d-c61c31b6d898" />
 # actividad-4punto2
 
 ## Estructura recomendada del repositorio
