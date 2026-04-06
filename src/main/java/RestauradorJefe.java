@@ -5,7 +5,7 @@ public class RestauradorJefe extends Usuario {
     private List<Restauracion> restauraciones;
 
     public RestauradorJefe(int idUsuario, String nombre, String apellido, String email, String contraseña) {
-        super(idUsuario, nombre, apellido, email, contraseña, "RestauradorJefe");
+        super(idUsuario, nombre, apellido, email, contraseña, "restaurador_jefe");
         this.restauraciones = new ArrayList<>();
     }
 

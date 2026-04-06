@@ -4,7 +4,7 @@ public class EncargadoCatalogo extends Usuario {
     private Catalogo catalogo;
 
     public EncargadoCatalogo(int idUsuario, String nombre, String apellido, String email, String contraseña, Catalogo catalogo) {
-        super(idUsuario, nombre, apellido, email, contraseña, "EncargadoCatalogo");
+        super(idUsuario, nombre, apellido, email, contraseña, "encargado_catalogo");
         setCatalogo(catalogo);
     }
 

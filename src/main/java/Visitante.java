@@ -2,7 +2,7 @@ import java.util.List;
 
 public class Visitante extends Usuario {
     public Visitante(int idUsuario, String nombre, String apellido, String email, String contraseña) {
-        super(idUsuario, nombre, apellido, email, contraseña, "Visitante");
+        super(idUsuario, nombre, apellido, email, contraseña, "visitante");
     }
 
     public List<ObraArte> consultarObrasPorSala(Sala sala) {
