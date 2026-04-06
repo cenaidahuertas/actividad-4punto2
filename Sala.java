@@ -34,7 +34,7 @@ public class Sala {
         return obras;
     }
 
-    public void asignarObras(ObraArte obra) {
+    public void asignarObra(ObraArte obra) {
         if (obra != null) {
             obras.add(obra);
         } else {

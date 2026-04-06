@@ -182,7 +182,7 @@ public class Main {
                     if (sel.matches("\\d+")) {
                         int pos = Integer.parseInt(sel) - 1;
                         if (pos >= 0 && pos < obras.size()) {
-                            Cesion cesion = new Cesion(obras.get(pos), museo, LocalDate.now(), LocalDate.of(2026, 12, 31), 5000000);
+                            Cesion cesion = new Cesion(obras.get(pos), museo, LocalDate.now(), LocalDate.of(2026, 12, 31), 5000000, "activa");
                             usuario.gestionarCesion(cesion);
                             cesion.iniciarCesion();
                         } else {
@@ -194,7 +194,7 @@ public class Main {
                 }
 
             } else if (opcion.equals("4")) {
-                usuario.verCesionesActivas();
+                usuario.verCeseionesActivas();
                 pausar();
 
             } else if (opcion.equals("0")) {

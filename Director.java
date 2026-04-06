@@ -5,7 +5,7 @@ public class Director extends Usuario {
     private List<Cesion> cesiones;
 
     public Director(int IdUsuario, String nombre, String apellido, String email, String contraseña) {
-        super(IdUsuario, nombre, apellido, email, contraseña);
+        super(IdUsuario, nombre, apellido, email, contraseña, "director");
         this.cesiones = new ArrayList<>();
     }
 
@@ -24,8 +24,8 @@ public class Director extends Usuario {
         return total;
     }
     
-    public void verCartalogo() {
-        this.catalogo.listarObras();
+    public void verCatalogo(Catalogo catalogo) {
+        catalogo.listarObras();
     }
     
     public List<Cesion> verCeseionesActivas() {

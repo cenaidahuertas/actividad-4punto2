@@ -37,6 +37,22 @@ public class RestauradorJefe extends Usuario {
             return restauraciones;
         }
 
+    public void iniciarRestauracion(Restauracion restauracion) {
+        restauracion.getObra().setEstado("en restauracion");
+        restauracion.iniciarRestauracion();
+        System.out.println("Restauracion de " + restauracion.getObra().getTitulo() + " iniciada correctamente.");
+    }
+
+    public void finalizarRestauracion(Restauracion restauracion) {
+        if (!"en proceso".equals(restauracion.getEstado())) {
+            System.out.println("La restauracion no esta en proceso. Estado: " + restauracion.getEstado());
+            return;
+        }
+        restauracion.finalizarRestauracion();
+        restauracion.getObra().setEstado("disponible");
+        System.out.println("Restauracion de " + restauracion.getObra().getTitulo() + " finalizada correctamente.");
+    }
+
         @Override
         public String toString() {
             return "RestauradorJefe{" +

@@ -13,20 +13,20 @@ public class EncargadoCatalogo extends Usuario {
     }
 
     public void setCatalogo(Catalogo catalogo) {
-        if (catalogo == null) this.catalogo = catalogo;
+        if (catalogo != null) this.catalogo = catalogo;
         else throw new IllegalArgumentException("El catálogo debe ser una instancia válida de Catalogo.");
     }
 
-    public  void rgistrarObra(Obra obra) {
-        catalogo.agregarObra(obra);
+    public void registrarObra(ObraArte obra) {
+        catalogo.registrarObra(obra);
         System.out.println("Obra '" + obra.getTitulo() + "' registrada correctamente.");
     }
 
     public void editarObra(int idObra, String titulo, String autor, String periodo, String estado) {
         ObraArte obra = catalogo.buscarObra(idObra);
-        if (obra != null) {
+        if (obra == null) {
             System.out.println("No se encontro ninguna obra con el ID: " + idObra + ".");
-        return
+        return;
         }
         if (titulo != null) obra.setTitulo(titulo);
         if (autor != null) obra.setAutor(autor);
